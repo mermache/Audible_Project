@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TheMainViewController.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,15 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    TheMainViewController *mainViewController = [[TheMainViewController alloc] init];
+    mainViewController.title = @"The Cards Game";
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    self.window.rootViewController = nav;
+
     return YES;
 }
 
